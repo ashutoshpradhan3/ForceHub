@@ -63,5 +63,3 @@ ForceHub is a sleek, interactive frontend interface for Codeforces users to:
 ![ForceHub UI Preview](logo.png)
 
 ---
-
-Built with ❤️ using Codeforces data.
