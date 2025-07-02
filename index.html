@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForceHub </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="logo.png" alt="ForceHub Logo" class="logo">
+      <h1>ForceHub</h1>
+      <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    </header>
+
+    <div class="input-section">
+      <input type="text" id="username" placeholder="Enter Codeforces Handle..." />
+      <button onclick="fetchUserData()">Get Profile</button>
+    </div>
+
+    <div id="userInfo" class="card hidden">
+      <h2>User Profile</h2>
+      <div class="profile-details" id="profile"></div>
+    </div>
+
+    <div id="solvedCount" class="card hidden">
+      <h2>Problems Solved by Rating</h2>
+      <canvas id="ratingChart"></canvas>
+    </div>
+
+    <div class="rating-section">
+      <input type="number" id="ratingInput" placeholder="Enter problem rating..." />
+      <button onclick="filterProblemsByRating()">Find Problems</button>
+    </div>
+
+    <div class="topic-section">
+      <input type="text" id="topicInput" placeholder="Enter topic(s), comma-separated... eg: dp,greedy" />
+      <button onclick="filterProblemsByTags()">Search by Topic</button>
+    </div>
+
+    <div id="ratedProblems" class="card hidden">
+      <h2>Problems of Specified Rating</h2>
+      <div class="problem-list" id="ratedList"></div>
+    </div>
+
+    <div id="taggedProblems" class="card hidden">
+      <h2>Problems by Topics</h2>
+      <div class="problem-list" id="taggedList"></div>
+    </div>
+
+    <div id="recentContests" class="card">
+      <h2>Recent Contests</h2>
+      <div class="contest-details" id="contests"></div>
+    </div>
+
+    <div id="problemSet" class="card">
+      <h2>Sample Problems</h2>
+      <div class="problem-list" id="problems"></div>
+    </div>
+
+    <div id="leaderboard" class="card hidden">
+      <h2>Top Users (Codeforces)</h2>
+      <div class="leaderboard-list" id="leaders"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
