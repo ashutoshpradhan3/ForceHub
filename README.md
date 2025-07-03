@@ -46,7 +46,7 @@ ForceHub is a sleek, interactive frontend interface for Codeforces users to:
 
 1. Clone the repository or download the files:
    ```
-   git clone <your-repo-url>
+   git clone https://github.com/ashutoshpradhan3/ForceHub.git
    ```
 
 2. Open `index.html` in any modern web browser.
